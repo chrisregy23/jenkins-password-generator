@@ -67,7 +67,7 @@ while True:
     try:
         needs_number_input = input("Do you need numbers in your password? (y/n)").lower()
         if needs_number_input not in ["y", "n"]:
-            raise Exception("Enter either y or n")
+            raise Exception("Enter either y or n!")
         if needs_number_input == "y":
             needs_number = True
             while True:
