@@ -13,7 +13,7 @@ pipeline{
                 script{
                     sh """
                     cd ${env.WORKSPACE}
-                    echo \"${MIN_LENGTH}\\ny\\n${MIN_NUMBER_LENGTH}\\ny\\n${MIN_PUNC_LENGTH}\" | python3 generate_password.py
+                    echo \"${MIN_LENGTH}\\ny\\n${MIN_NUMBER_LENGTH}\\ny\\n${MIN_PUNC_LENGTH}\" | python3 generate-password.py
                     """
                 }
             }
