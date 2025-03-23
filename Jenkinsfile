@@ -11,6 +11,7 @@ pipeline{
         stage('Generate Password'){
             steps{
                 script{
+                    checkout scm
                     sh """
                     python3 generate_password.py <<EOF
                     ${MIN_LENGTH}
