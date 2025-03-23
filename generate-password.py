@@ -75,7 +75,7 @@ while True:
                     min_number_length = int(input("How many minimum numbers do you want?"))
                     break
                 except ValueError:
-                    print("Please enter an integer value")    
+                    print("Please enter an integer value.")    
         break
     except Exception as e:
         print(e)
