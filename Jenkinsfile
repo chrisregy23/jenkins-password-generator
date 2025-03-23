@@ -13,7 +13,7 @@ pipeline{
                 script{
                     checkout scm
                     sh """
-                    python3 generate_password.py <<EOF
+                    python3 generate-password.py <<EOF
                     ${MIN_LENGTH}
                     y
                     ${MIN_NUMBER_LENGTH}
