@@ -92,7 +92,7 @@ while True:
                     min_punc_length = int(input("How many minimum spl. characters do you need?"))
                     break
                 except ValueError:
-                    print("Enter a valid integer")   
+                    print("Enter a valid integer.")   
         break
     except Exception as e:
         print(e)
