@@ -11,15 +11,9 @@ pipeline{
         stage('Generate Password'){
             steps{
                 script{
-                    checkout scm
                     sh """
-                    python3 generate-password.py <<EOF
-                    ${MIN_LENGTH}
-                    y
-                    ${MIN_NUMBER_LENGTH}
-                    y
-                    ${MIN_PUNC_LENGTH}
-                    EOF
+                    cd ${env.WORKSPACE}
+                    echo \"${MIN_LENGTH}\\ny\\n${MIN_NUMBER_LENGTH}\\ny\\n${MIN_PUNC_LENGTH}\" | python3 generate_password.py
                     """
                 }
             }
